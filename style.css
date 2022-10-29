@@ -57,25 +57,29 @@ nav ul li {
 .box:hover {
     background-color: rgb(231, 146, 231);
 }
-.gameInfo{
+
+.gameInfo {
     margin: 0 1rem;
 }
+
 .gameInfoContainer {
     display: flex;
     width: 22vw;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-size: 25px;
     margin-top: 1rem;
     align-items: center;
     padding: 0 1rem;
 
 }
-#line{
+
+#line {
     position: absolute;
     height: 3px;
     width: 0;
     background-color: black;
 }
+
 .gameInfoContainer button {
     padding: .5rem 1rem;
     font-size: 25px;
@@ -110,4 +114,51 @@ nav ul li {
 .winningGif img {
     width: 0vw;
     transition: width .3s ease-in-out;
+}
+
+@media (max-width:1055px) {
+    .gameInfoContainer {
+        width: 100%;
+    }
+
+    .gameInfoContainer button {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:640px) {
+    .gameInfo h1 {
+        font-size: 25px !important;
+    }
+
+}
+
+@media (max-width:560px) {
+    .gameContainer {
+        height: 81vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .gameInfo{
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    .gameInfo h1 {
+        font-size: 22px !important;
+    }
+    .winningGif{
+        display: flex;
+        justify-content: center;
+    }
+    .box .boxContent{
+        font-size: 40px;
+    }
+
 }
